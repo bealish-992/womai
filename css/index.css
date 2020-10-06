@@ -1,4 +1,4 @@
-html,body{width: 100%;height: 100%;}
+html,body{width: 100%;height: 100%;font-size: 14px;}
 #header{
     width: 100%;
     min-height: 330px;
@@ -21,11 +21,47 @@ html,body{width: 100%;height: 100%;}
     height: 30px;
     width: 100%;
 }
-.top-linkwarp>.top-link-left{
+.top-link{
+    width: 1210px;
+    height: 100%;
+    margin: 0px auto;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: 300;
+}
+.top-linkwarp .top-link-left{
     float: left;
 }
-.top-linkwarp>.top-link-right{
+.top-linkwarp .top-link-right{
     float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+#city{
+    font-style: normal;
+    height: 100%;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.top-arrow{
+    font-size: 8px;
+}
+.top-link a:hover{
+    color: red;
+}
+.top-link-right>ul>li{
+    float: left;
+    padding: 0px 10px;
+    text-align: center;
+}
+.top-link-right>ul>li::after{
+    content: "|";
+    color: #c4bdbd;
+    padding-left: 10px;
+}
+#login,#regist{margin: 0px 10px;}
+
 .fLeft{float: left;}
 .fRight{float: right;}
