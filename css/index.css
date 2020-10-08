@@ -2,7 +2,7 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
 #header{
     width: 100%;
     min-height: 330px;
-    background-color: bisque;
+    border-bottom: 2px solid red;
 }
 .header-top{
     height: 100px;
@@ -16,6 +16,9 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
     display: block;
     height: 100%;
 }
+
+
+/* 头部链接行 */
 .top-linkwarp{
     background-color: #eeeeee;
     height: 30px;
@@ -48,9 +51,7 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
 .top-arrow{
     font-size: 8px;
 }
-a:hover{
-    color: red;
-}
+
 .top-link-right>ul>li{
     float: left;
     padding: 0px 10px;
@@ -62,19 +63,22 @@ a:hover{
     padding-left: 10px;
 }
 #login,#regist{margin: 0px 10px;}
+
+
+/* 头部搜索块 */
 .top-search{
     width: 1210px;
     margin: 0px auto;
     height: 200px;
-    background-color:goldenrod;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .logo{
     margin-top: 40px;
 }
 .search{
-    margin: 45px 170px 0px 20px;
+    margin: 45px 160px 0px 20px;
 }
 .search>form>input{
     height: 45px;
@@ -83,10 +87,24 @@ a:hover{
 .search>form>a{
     display: inline-block;
     width: 40px;
+    margin-left: 8px;
+    color:rgb(100, 100, 100) ;
+}
+.search>form>a:hover{
+    color: red;
 }
 .search>form{
     display: flex;
     justify-content: left;
+}
+.search>div>a{
+    font-size: 8px;
+    font-weight: 200px;
+    margin-top: 5px;
+    color: rgb(122, 118, 118);
+}
+.search>div>a:hover{
+    color: red;
 }
 .word{
     font-size: 15px;
@@ -117,5 +135,75 @@ a:hover{
 .sjwm{
     margin-top: 40px;
 }
+
+.nav-head{
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(240, 62, 62);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+}
+.tuangou{
+    position: absolute;
+    left: 220px;
+    bottom: 13px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.top-gwc{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+}
+.top-gwc>span{
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    width: 27px;
+    height: 20px;
+    background: url(../img/index.png) no-repeat -47px 0px;
+}
+.top-gwc>span>i{
+    display: block;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 13px;
+    position: absolute;
+    top: -17px;
+    left: 8px;
+    background: url(../img/index.png) no-repeat -10px -40px;
+}
+.top-gwc>a{margin-left: 30px;color:rgb(122, 118, 118);}
+.top-gwc>a:hover{color: red;}
+.top-gwc>i{
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    margin-left: 25px;
+}
+.arrow-u{background: url(../img/index.png) no-repeat 0px -34px ;}
+.arrow-d{background: url(../img/index.png) no-repeat 0px -40px ;}
+
+
+
 .fLeft{float: left;}
 .fRight{float: right;}
+a:hover{
+    color: red;
+}
