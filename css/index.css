@@ -1,4 +1,12 @@
-html,body{width: 100%;height: 100%;font-size: 14px;}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    
+}
+a:hover{
+   color: rgb(80, 70, 70); 
+}
 #header{
     width: 100%;
     min-height: 330px;
@@ -90,9 +98,6 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
     margin-left: 8px;
     color:rgb(100, 100, 100) ;
 }
-.search>form>a:hover{
-    color: red;
-}
 .search>form{
     display: flex;
     justify-content: left;
@@ -102,9 +107,6 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
     font-weight: 200px;
     margin-top: 5px;
     color: rgb(122, 118, 118);
-}
-.search>div>a:hover{
-    color: red;
 }
 .word{
     font-size: 15px;
@@ -140,7 +142,7 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
     position: absolute;
     left: 0px;
     bottom: -1px;
-    width: 200px;
+    width: 210px;
     height: 50px;
     background-color: rgb(240, 62, 62);
     color: white;
@@ -151,7 +153,7 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
 }
 .tuangou{
     position: absolute;
-    left: 220px;
+    left: 230px;
     bottom: 13px;
     font-size: 16px;
     font-weight: 500;
@@ -190,7 +192,6 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
     background: url(../img/index.png) no-repeat -10px -40px;
 }
 .top-gwc>a{margin-left: 30px;color:rgb(122, 118, 118);}
-.top-gwc>a:hover{color: red;}
 .top-gwc>i{
     display: inline-block;
     width: 10px;
@@ -201,9 +202,99 @@ html,body{width: 100%;height: 100%;font-size: 14px;}
 .arrow-d{background: url(../img/index.png) no-repeat 0px -40px ;}
 
 
+/* banner */
+#banner{
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav{
+    height: 100%;
+    width: 210px;
+}
+.nav>ul{
+    padding-top: 10px;
+    height: 100%;
+    background-color: #C70019;
+}
+.nav>ul>li{
+    height: 39px;
+    font-size: 14px;
+    line-height: 32px;
+    padding-left: 50px;
+    position: relative;
+}
+.nav>ul>li>a{
+    color: #ffffff;
+}
+.nav>ul>li>i{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+.nav-icon{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../img/navicon.png) no-repeat 0px 0px;
+}
+#lunbo{
+    flex: 1;
+    height: 100%;
+}
+.banner-right{
+    width: 200px;
+    height: 100%;
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+}
+.banner-right div:first-of-type{
+    width: 67px;
+    height: 31px;
+    border-bottom: 2px solid #2d8800;
+    text-align: center;
+    line-height: 31px;
+    font-size: 12px;
+    color: #0D8700;
+}
+.banner-right>ul{
+    list-style: none outside none;
+    line-height: 21px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.dot{
+    font-size: 20px;
+    vertical-align: bottom;
+    margin-right: 9px;
+    margin-left: 10px;
+}
+.servers{
+    width: 201px;
+    height: 186px;
+    margin-top: 15px;
+}
+.servers_in{
+    float: left;
+    width: 66px;
+    height: 60px;
+    border-bottom: 1px dotted #ddd;
+    border-right: 1px dotted #ddd;
+    margin-top: 1px;
+    overflow: hidden;
+    text-align: center;
+}
 
+
+
+/* main */
+.main{
+    min-height:500px ;
+    
+}
 .fLeft{float: left;}
 .fRight{float: right;}
-a:hover{
-    color: red;
+.width-margin{
+    width: 1210px;
+    margin: 0px auto;
 }
