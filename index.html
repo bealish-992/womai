@@ -140,7 +140,7 @@
             <div>服务公告</div>
             <ul>
                 <li><span class="dot">·</span><a>国庆期间太原快递公告</a></li>
-                <li><span class="dot">·</span><a>中粮之夜纸币中奖名单</a></li>
+                <li><span class="dot">·</span><a>中粮之夜直播中奖名单</a></li>
                 <li><span class="dot">·</span><a>问卷调研获奖公告</a></li>
             </ul>
             <div class="servers">
@@ -151,8 +151,66 @@
         </div>
 
     </div>
-    <div class="main width-margin">
-
+    <div id="main" class="width-margin">
+        <div class="tuijian">
+            <h3>我买推荐</h3><span class="main-title"></span>
+            <div class="tj-spices">
+                <div class=""><img src="./img/tj2.jpg" alt=""></div>
+                <div style="margin-left: 15px;">
+                    <div class="row">
+                        <div class="col-md-3"><img src="./img/tj3.jpg" alt=""></div>
+                        <div class="col-md-3"><img src="./img/tj4.jpg" alt=""></div>
+                        <div class="col-md-6"><img src="./img/tj6.jpg" alt=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><img src="./img/tj5.jpg" alt=""></div>
+                        <div class="col-md-3"><img src="./img/tj7.jpg" alt=""></div>
+                        <div class="col-md-3"><img src="./img/tj8.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <div><img src="./img/tj9.jpg" alt=""></div>
+                </li>
+                <li>
+                    <div><img src="./img/tj10.jpg" alt=""></div>
+                </li>
+                <li>
+                    <div><img src="./img/tj11.jpg" alt=""></div>
+                </li>
+            </ul>
+        </div>
+        <div class="jinkou">
+            <div class="jk-l fLeft">
+                <h3>
+                    <i></i>
+                    进口食品
+                </h3>
+                <div class="jk-l-nav">
+                    <span>1F</span>
+                    <ul>
+                        <li><i></i><a>进口食品</a></li>
+                        <li><i></i><a>进口食品</a></li>
+                        <li><i></i><a>进口食品</a></li>
+                        <li><i></i><a>进口食品</a></li>
+                        <li><i></i><a>进口食品</a></li>
+                        <li><i></i><a>进口食品</a></li>
+                    </ul>
+                    <div class="floor-adv">
+                        <img src="./img/floor_adv.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="jk-list fLeft">
+                <ol>
+                    <li class="fLeft cur">精选推荐</li>
+                    <li class="fLeft">热卖推荐</li>
+                </ol>
+                <ul class="jingxuan"> </ul>
+                <ul class="remai dis-none"></ul>
+            </div>
+        </div>
     </div>
 
 
@@ -165,16 +223,16 @@
     <script>
         (function () {
             $aColor = 'rgb(80, 70, 70)';
-            $("a").hover(function () {
+            $("a :not(.jk-l-nav a)").hover(function () {
                 $aColor = $(this).css("color");
-                $(this).css({ "color": "red" })
+                $(this).css({ "color": "#C70019" })
             }, function () {
                 $(this).css({ "color": $aColor })
             });
         })();
 
-        (function(){
-            for(let i=1;i<=9;i++){
+        (function () {
+            for (let i = 1; i <= 9; i++) {
                 $(".servers").append(`<li>
                     <img class="servers_in" src="./img/server${i}.jpg" />
                 </li>`)

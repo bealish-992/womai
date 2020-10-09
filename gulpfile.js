@@ -1,6 +1,7 @@
 const gulp=require("gulp");
 const sass=require("gulp-sass");
 const connect=require("gulp-connect");
+const sourcemaps=require("gulp-sourcemaps");
 
 gulp.task("html",done=>{
     gulp.src("*.html")
@@ -28,7 +29,9 @@ gulp.task("js",done=>{
 
 gulp.task("sass",done=>{
     gulp.src("sass/*.scss")
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest("dist/css"))
         .pipe(connect.reload());
 
@@ -43,11 +46,13 @@ gulp.task("server",done=>{
     done();
 })
 
-gulp.task("build",gulp.series("html","sass"));
+gulp.task("build",gulp.series("html","sass","js","img"));
 
 gulp.task("watch",done=>{
     gulp.watch(["*.html","html/*.html"],gulp.series("html"));
     gulp.watch("*sass/*.scss",gulp.series("sass"));
+    gulp.watch("js/*.js",gulp.series("js"));
+    gulp.watch("img/*",gulp.series("img"));
     done();
 })
 

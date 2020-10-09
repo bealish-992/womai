@@ -7,7 +7,19 @@ body {
     font-size: 12px;
     color: rgb(80, 70, 70);
 }
+.fLeft {
+    float: left;
+}
 
+.fRight {
+    float: right;
+}
+
+.width-margin {
+    width: 1210px;
+    margin: 0px auto;
+}
+a{cursor: default;}
 a:hover {
     color: rgb(80, 70, 70);
 }
@@ -339,20 +351,162 @@ a:hover {
 
 
 /* main */
-.main {
+#main {
+    margin-top: 30px;
     min-height: 500px;
-
+    h3{
+        display: inline-block;
+        font-size: 20px;
+        line-height: 46px;
+    }
 }
-
-.fLeft {
-    float: left;
+.main-title{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    width: 216px;
+    height: 18px;
+    background: url(../img/tj1.jpg);
 }
-
-.fRight {
-    float: right;
+.tj-spices{
+    width: $percent;
+    height: 420px;
+    display: flex;
+    justify-content:left;
+    div{
+        div{
+            div{padding: 0px;}
+        }
+    }
 }
-
-.width-margin {
-    width: 1210px;
-    margin: 0px auto;
+.inblock{
+    display: inline-block;
+    img{
+        display: block;
+    }
 }
+.tuijian>ul{
+    display: flex;
+    justify-content: left;
+    width: $percent;
+    height: 110px;
+}
+.jinkou{
+    margin-top: 14px;
+    width: $percent;
+    height: 542px;
+    .jk-l{
+        width: 242px;
+        h3{
+            padding-left: 15px;
+            font-size: 20px;
+            position: relative;
+            color: #88A9E2;
+            i{
+                position: absolute;
+                top: 11px;
+                left: 0;
+                display: block;
+                width: 5px;
+                height: 20px;
+                background-color: #88A9E2;
+            }
+        }
+        .jk-l-nav{
+            height: 504px;
+            width: $percent;
+            background-color: #a1c0f6;
+            span{
+                display: block;
+                width: 64px;
+                height: 64px;
+                background: url(../img/floor_icon.png) no-repeat;
+                padding-top: 10px;
+                padding-left: 8px;
+                font-size: 18px;
+                color: #fff;
+                font-weight: 700;
+            }
+            ul{
+                width: 200px;
+                height: 120px;
+                margin: -15px auto 0px;
+                border-bottom: 1px solid rgba(146,142,142,0.3);
+                li{
+                    width: 100px;
+                    float: left;
+                    font-size: 14px;
+                    line-height: 36px;
+                    a{
+                        &:hover{
+                           color: #333; 
+                        }
+                        color: #5e7090;
+                    }
+                    i{
+                        vertical-align: middle;
+                        margin-bottom: 3px;
+                        margin-right: 5px;
+                        display: inline-block;
+                        width: 22px;
+                        height: 22px;
+                        background: url(../img/floor_list_icon.png) no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .jk-list{
+        width: 968px;
+        ol{
+            margin-top: 10px;
+            margin-left: 30px;
+            overflow: hidden;
+            li{
+                height: 36px;
+                margin-right: 30px;
+                text-align: center;
+                font-size: 16px;
+                line-height: 36px;
+                color: #434343;
+            }
+        }
+        ul{
+            width: $percent;
+            height: 502px;
+            border-top: 1px solid #a1c0f6;
+            li{
+                width: 239px;
+                height: 250px;
+                border-bottom: 1px solid #ededed;
+                border-right: 1px solid #ededed;
+                overflow: hidden;
+            }
+        }
+        .jingxuan{
+            position: relative;
+            li{
+                display: inline-block;
+            }
+            li:first-of-type{
+                margin-right: 484px;
+            }
+            div{
+                position: absolute;
+                top: 0px;
+                left: 240px;
+                height: 250px;
+                width: 483px;
+            }
+        }
+        .remai{
+            li{
+                display: inline-block;
+            }
+        }
+    }
+}
+.cur{border-bottom: 2px solid #a1c0f6;}
+.dis-none{display: none;}
+
