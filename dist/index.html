@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>中粮我买网</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1979685_6ow7khk4khv.css">
@@ -46,16 +46,17 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="closebtn"></div>
                         </div>
                     </span>
                     <span>hi,欢迎来我买网!</span>
-                    <a id="login">登录</a>
+                    <a id="login" href="./html/login.html">登录</a>
                     <a id="regist">注册</a>
                 </div>
                 <div class="top-link-right">
                     <span class="top-accont">我的账户<i class="top-arrow iconfont icon-kuozhan1"></i></span>
                     <ul>
-                        <li><a class="top-link-car"><i class="glyphicon glyphicon-shopping-cart"
+                        <li><a class="top-link-car" href="./html/gwc.html" target="_blank"><i class="glyphicon glyphicon-shopping-cart"
                                     style="color: grey;"></i>购物车<span style="color: red;">0</span>件</a></li>
                         <li><span class="top-servers">客户服务<i class="top-arrow iconfont icon-kuozhan1"></i></span></li>
                         <li><a>企业购</a></li>
@@ -97,11 +98,35 @@
             <div class="nav-head">全部商品分类</div>
             <a href="https://tuan.womai.com/tuan/productlist.do" target="_blank" class="tuangou">团购</a>
             <div class="top-gwc">
-                <span>
-                    <i>0</i>
-                </span>
-                <a href="https://www.womai.com/Cart/ShowCart.do" target="_blank">购物车</a>
-                <i class="arrow-d"></i>
+                <div class="wrap">
+                    <span>
+                        <i>0</i>
+                    </span>
+                    <a href="./html/gwc.html" target="_blank">购物车</a>
+                    <i class="arrow-d"></i>
+                </div>
+                <div class="top-gwc-list">
+                    <h3>最近加入的商品</h3>
+                    <div class="items">
+                        <!-- <dl>
+                            <dt><a><img src="./img/tj3.jpg" alt=""></a></dt>
+                            <dd>商品名称</dd>
+                            <dd>
+                                <div class="pri">
+                                    <span>￥24<span>x1</span></span>
+                                </div>
+                                <div class="del-btn">
+                                    <span>删除</span>
+                                </div>
+                            </dd>
+                        </dl> -->
+                        <div class="account">
+                            <span>共<span class="red">0</span>件商品</span>
+                            &nbsp;<span>合计：<span class="count red">￥0</span>(含优惠)</span>
+                            <span class="j-btn"><a href="./html/gwc.html" target="_blank">结算</a></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -110,16 +135,16 @@
     <div id="banner" class="width-margin">
         <div class="nav">
             <ul>
-                <li><i class="nav-icon"></i><a>肉禽水产</a>&nbsp;&nbsp;<a>水果蔬菜</a></li>
-                <li><i class="nav-icon"></i><a>进口食品</a>&nbsp;&nbsp;<a>进口直采</a></li>
-                <li><i class="nav-icon"></i><a>酒</a>&nbsp;&nbsp;<a>饮料/冲调</a>&nbsp;&nbsp;<a>茶</a></li>
-                <li><i class="nav-icon"></i><a>休闲零食</a>&nbsp;&nbsp;<a>地方特产</a></li>
-                <li><i class="nav-icon"></i><a>营养健康</a>&nbsp;&nbsp;<a>奶制品</a></li>
-                <li><i class="nav-icon"></i><a>粮油副食</a>&nbsp;&nbsp;<a>调味干货</a></li>
-                <li><i class="nav-icon"></i><a>母婴食品</a></li>
-                <li><i class="nav-icon"></i><a>礼卡礼券</a></li>
-                <li><i class="nav-icon"></i><a>中粮制造</a></li>
-                <li><i class="nav-icon"></i><a>我买品牌</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>肉禽水产</a>&nbsp;&nbsp;<a>水果蔬菜</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>进口食品</a>&nbsp;&nbsp;<a>进口直采</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>酒</a>&nbsp;&nbsp;<a>饮料/冲调</a>&nbsp;&nbsp;<a>茶</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>休闲零食</a>&nbsp;&nbsp;<a>地方特产</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>营养健康</a>&nbsp;&nbsp;<a>奶制品</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>粮油副食</a>&nbsp;&nbsp;<a>调味干货</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>母婴食品</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>礼卡礼券</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>中粮制造</a></li>
+                <li class="kinds"><i class="nav-icon"></i><a>我买品牌</a></li>
                 <div class="nav-section">
                     <div>
                         <span>精品水果></span>
@@ -294,10 +319,19 @@
             </div>
             <div class="jk-list fLeft">
                 <ol>
-                    <li class="fLeft cur">精选推荐</li>
-                    <li class="fLeft">热卖推荐</li>
+                    <li id="jx" class="fLeft cur">精选推荐</li>
+                    <li id="rm" class="fLeft">热卖推荐</li>
                 </ol>
-                <ul class="jingxuan"> </ul>
+                <ul class="jingxuan">
+                    <!-- <li>
+                        <a><img src="./img/tj3.jpg" alt=""></a>
+                        <a class="mleft">哈哈哈哈哈</a>
+                        <span class="mleft">￥<span>24</span></span>
+                    </li> -->
+                    <div>
+                        <img src="./img/jxpic.jpg" alt="">
+                    </div>
+                </ul>
                 <ul class="remai dis-none"></ul>
             </div>
         </div>
@@ -609,7 +643,7 @@
                     <i></i>
                 </h3>
                 <div class="products">
-                    <dl>
+                    <!-- <dl>
                         <dt>
                             <a href="">
                                 <img src="./img/tj3.jpg" alt="">
@@ -623,21 +657,21 @@
                             <span>&nbsp;x&nbsp;1</span>
                             <span><a>删除</a></span>
                         </dd>
-                    </dl>
+                    </dl> -->
                     <div class="pro-bottom">
                         <div class="chosen">
-                            <span class="fLeft">已选2件</span>
-                            <span class="fRight">￥24</span>
+                            <span class="fLeft">已选0件</span>
+                            <span class="fRight">￥0</span>
                         </div>
                         <div class="buy">
-                            <a>结算</a>
+                            <a href="./html/gwc.html" target="_blank">结算</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="mk">  </div>
 
 
 
@@ -646,28 +680,11 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script>
-        (function () {
-            $aColor = 'rgb(80, 70, 70)';
-            $("a").not($(".jk-l-nav a")).not($(".footer a")).hover(function () {
-                $aColor = $(this).css("color");
-                $(this).css({ "color": "#C70019" })
-            }, function () {
-                $(this).css({ "color": $aColor })
-            });
-        })();
+        
 
-        (function () {
-            for (let i = 1; i <= 9; i++) {
-                $(".servers").append(`<li>
-                    <img class="servers_in" src="./img/server${i}.jpg" />
-                </li>`)
-
-            }
-        })();
-
-        $("#lunbo").carousel({ interval: 3000 });
+        
     </script>
-
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
