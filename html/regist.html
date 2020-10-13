@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/cleanDefault.css">
+    <link rel="stylesheet" href="../css/regist.css">
+    <link rel="stylesheet" href="../css/RegLogFooter.css">
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="../js/regist.js"></script>
+</head>
+<body>
+    <div class="regist">
+        <div class="reg_header">
+            <div class="header_logo">
+                <a href="../index.html"><img src="../img/reglog-logo.png" alt=""></a>
+            </div>
+            <div class="header_title">欢迎注册</div>
+            <div class="header_tip">
+                <span>已有我买网账户？</span>
+                <a href="./login.html">请登录</a>
+            </div>
+            <div class="header_line"></div>
+        </div>
+        <div class="regist_content">
+            <div class="reg_bg"><img src="../img/regist-bg.jpg" alt=""></div>
+            <div class="reg_main">
+                <div class="rm_outside">
+                    <div class="rm_inside">
+                        <div class="rmi_content">
+                            <form>
+                                <div class="rmi_input">
+                                    <input id="email" class="long_input" type="text" placeholder="邮箱/手机">
+                                    <div class="input_error">
+                                        <i></i>
+                                        
+                                    </div>
+                                </div>
+                                <div class="rmi_input">
+                                    <input id="username" class="long_input" type="text" placeholder="用户名">
+                                    <div class="input_error">
+                                        <i></i>
+                                        
+                                    </div>
+                                </div>
+                                <div class="rmi_input">
+                                    <input id="pwd" class="long_input" type="text" placeholder="设置密码">
+                                    <div class="input_error">
+                                        <i></i>
+                                        
+                                    </div>
+                                </div>
+                                <div class="rmi_input">
+                                    <input id="repwd" class="long_input" type="text" placeholder="确认密码">
+                                    <div class="input_error">
+                                        <i></i>
+                                        
+                                    </div>
+                                </div>
+                                <div class="rmi_input">
+                                    <input id="ponecode" class="sort_input" type="text" placeholder="手机验证码">
+                                    <input type="button" name="" id="sendBtn" class="send_btn" value="发送验证码">
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="rmi_line">
+                                    <span>
+                                        <input type="checkbox" name="" id="agree">
+                                    </span>
+                                    <label for="agree">我同意</label>
+                                    <a >《用户服务协议》</a>和<a>《我买网隐私协议》</a>
+                                </div>
+                                <div class="rmi_btn">
+                                    <input type="button" name="" class="reg_btn" id="regBtn" value="立即注册">
+                                    <span class="rmi_yaoqing">我有邀请码></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="countdown tanc">
+        <h4>注册成功</h4>
+        <span>页面即将跳转</span>
+        <span class="time">3</span>
+        <a href="./login.html">现在就去</a>
+    </div>
+    <div class="shibai tanc">
+        <h4>注册失败</h4>
+        <span class="reason"></span>
+        <a>重试</a>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

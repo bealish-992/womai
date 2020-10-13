@@ -1,0 +1,47 @@
+.footer {
+    padding-top: 20px;
+    background: #efefef;
+    text-align: center;
+    color: #606060;
+    div {
+
+        line-height: 26px;
+    }
+
+    .w_m {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .footer_con {
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            color: #606060;
+        }
+
+        .beian {
+            display: inline-block;
+            width: 200px;
+
+            a {
+                img {
+                    float: left;
+                }
+
+                p {
+                    display: inline;
+                    margin: -4px 0px 0px 5px;
+                    color: #606060;
+                }
+            }
+        }
+    }
+
+    .f_bottom {
+        height: 28px;
+        background: #8cb91e;
+    }
+}
