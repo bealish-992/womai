@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/cleanDefault.css">
+    <link rel="stylesheet" href="../css/gwc.css">
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="../js/gwc.js"></script>
+</head>
+<body>
+    <div class="cart_content">
+        <div class="header">
+            <a href="../index.html" class="logo">
+                <img src="../img/reglog-logo.png" alt="">
+            </a>
+            <div class="step">
+                <i></i>
+            </div>
+        </div>
+
+        <div class="trip">
+            <span class="trip_content">我的购物车</span>
+            <a href="../index.html">继续购物></a>
+        </div>
+
+        <div class="shopping_cart">
+            <div class="order_nav">
+                <div class="hover_li">
+                    产地直采单(
+                        <em id="shop_nav"></em>
+                    )
+                </div>
+            </div>
+            <div class="contents">
+                <div class="con_titleline">
+                    <div class="con_t t1">商品</div>
+                    <div class="con_t t2">单价</div>
+                    <div class="con_t t3">数量</div>
+                    <div class="con_t t4">重量</div>
+                    <div class="con_t t5">小计</div>
+                    <div class="con_t t6">操作</div>
+                </div>
+                <div class="con_main">
+                    <div>
+                        <div class="goods">
+                            <div class="goods_title">
+                                <div class=" gt_left">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">全选</label>
+                                </div>
+                                <span class="title-sum">金额合计￥0.00</span>
+                            </div>
+                            <div class="goods_content">
+                                <div class="special_title"></div>
+                                <!-- <div class="good" data-id="pid">
+                                    <div class="good_pic1">
+                                        <div>
+                                            <input type="checkbox" class="checkbox">
+                                            <a class="img"><img id="pimg" src="" alt=""></a>
+                                            <div class="pname">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="good_pic2" id="price" data-price="pprice"></div>
+                                    <div class="good_pic3">
+                                        <div class="reduce"></div>
+                                        <input type="text" id="pnum">
+                                        <div class="plus"></div>
+                                    </div>
+                                    <div class="good_pic4">0.00</div>
+                                    <div class="good_pic5" id="xiaoji"></div>
+                                    <div class="good_pic6">
+                                        <a>收藏</a>
+                                        <a id="delete">删除</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="order_amount">
+                            <div class="order_edit"></div>
+                            <div class="order_right">
+                                <div class="order_total">
+                                    <span class="num">
+                                        已选<em>0</em>件
+                                    </span>
+                                    <span class="zongjia">￥0.00</span>
+                                    <span class="word">应付金额：</span>
+                                </div>
+                                <div class="btn">
+                                    <a>去结算</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

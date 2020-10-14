@@ -1,0 +1,18 @@
+$(function($){
+    $pname=$("#pname");
+    $pprice=$("#price");
+    $pimg=$("#pimg");
+    $pdesc=$("#pdesc");
+    uid=window.localStorage.getItem("uid");
+    $("#add").click(function(){
+        $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",{
+            pimg:$pimg.val(),
+            pname:$pname.val(),
+            pprice:$pprice.val(),
+            pdesc:$pdesc.val(),
+            uid
+        },data=>{
+            alert(data.msg);
+        })
+    })
+});

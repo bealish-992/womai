@@ -1,0 +1,108 @@
+body{color: #757575;font: 12px/150% Arial, Tahoma,"宋体";}
+#main{
+    width: 1210px;
+    background-color: #f5f5f5;
+    padding: 80px 20px 0px 20px;
+    margin: 0px auto;
+    ul{
+        overflow: hidden;
+        width: 1210px;
+        margin: 0px auto;
+        min-height: 400px;
+        background-color: #fff;
+        li{
+            &:hover{
+                border-color: #43a400;
+            }
+            float: left;
+            width: 220px;
+            height: 336px;
+            margin: 0px;
+            padding: 30px 8px;
+            border: 2px solid #fff;
+            overflow: hidden;
+            .pimg{
+                display: block;
+                width: 220px;
+                height: 220px;
+                img{
+                    display: block;
+                    width: 220px;
+                    height: 220px;
+                }
+            }
+            .pname{
+                display: block;
+                width: fit-content;
+                height: 38px;
+                margin: 2px 0 12px;
+                line-height: 19px;
+                color: #000;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover{
+                    color: rgb(118, 179, 118);
+                    text-decoration: underline;
+                }
+            }
+            .pprice{
+                height: 34px;
+                font: 20px/34px "微软雅黑";
+                color: #C40000;
+                overflow: hidden;
+                
+                b{
+                    font-weight: normal;
+                    font-size: 16px;
+                    font: 20px/34px "微软雅黑";
+                    color: #C40000;
+                }
+            }
+            .li_bottom{
+                height: 29px;
+                border-top: 1px solid #ededed;
+                border-left: 1px solid #ededed;
+                margin-bottom: 30px;
+                span{
+                    float: left;
+                    height: 28px;
+                    line-height: 28px;
+                    border-right: 1px solid #ededed;
+                    border-bottom: 1px solid #ededed;
+                    text-align: center;
+                    vertical-align: middle;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                .pingjia{
+                    width: 75px;
+                }
+                .collection{
+                    width: 51px;
+                    .png{
+                        display: inline-block;
+                        width: 16px;
+                        height: 15px;
+                        margin-right: 2px;
+                        background: url(../img/list_icon.png) no-repeat;
+                        vertical-align: middle;
+                        overflow: hidden;
+                        background-position: -45px -26px;
+                    }
+                }
+                .add_car{
+                    width: 89px;
+                    .png{
+                        display: inline-block;
+                        width: 16px;
+                        height: 15px;
+                        margin-right: 2px;
+                        background: url(../img/list_icon.png) no-repeat;
+                        vertical-align: middle;
+                        background-position: -45px -53px;
+                    }
+                }
+            }
+        }
+    }
+}

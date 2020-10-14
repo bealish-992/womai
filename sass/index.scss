@@ -51,6 +51,8 @@ a:hover {
 
 
 /* 头部链接行 */
+#header_username{display: none;margin-left: 10px;}
+.zhuxiao{display: none;margin-left: 5px;}
 .top-linkwarp {
     background-color: #eeeeee;
     height: 30px;
@@ -782,7 +784,12 @@ a:hover {
 
         .jingxuan {
             position: relative;
-
+            .pname{
+                white-space: nowrap;
+                width: 221px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
             li {
                 display: inline-block;
             }
@@ -1022,6 +1029,7 @@ a:hover {
             }
 
             .copyright {
+                float: left;
                 div {
                     height: 22px;
                     line-height: 22px;

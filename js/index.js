@@ -1,5 +1,6 @@
 
 $(function ($) {
+    let storage=window.localStorage;
     // 给页面的a标签添加划过颜色
     (function () {
         $aColor = 'rgb(80, 70, 70)';
@@ -108,7 +109,7 @@ $(function ($) {
 
     // 获取公共商品列表
     function getPublicProducts() {
-        $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", function (data) {
+        $.get("http://jx.xuzhixiang.top/ap/api/allproductlist.php?pagesize=100&pagenum=1", function (data) {
             arrProducts = data.data;
             let i = 1;
             arrProducts.forEach(obj => {
@@ -143,6 +144,24 @@ $(function ($) {
         })
     }
     getPublicProducts();
+
+    $(".zhuxiao").click(function(){
+        storage.clear();
+        window.location.reload();
+    })
+
+    // 检查登录状态，并修改页面内容
+    function checkLogin(){
+        let uid=storage.getItem("uid");
+        let username=storage.getItem("username");
+        if(uid&&username){
+            // console.log(uid,username)
+            $("#header_username").text(username).show().css("color","red");
+            $(".zhuxiao").show().css("font-size","12px");
+            $("#login").hide().next().hide();
+        }
+    }
+    checkLogin();
 
 });
 
