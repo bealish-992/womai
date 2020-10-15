@@ -159,9 +159,68 @@ $(function ($) {
             $("#header_username").text(username).show().css("color","red");
             $(".zhuxiao").show().css("font-size","12px");
             $("#login").hide().next().hide();
+        }else{
+            $("#header_username").hide();
+            $(".zhuxiao").hide();
+            $("#login").show();
+            $("#regist").show();
         }
     }
     checkLogin();
+    
 
+    // 添加购物车数据
+    function getgwcList(){
+        let uid=storage.getItem("uid");
+        console.log(uid);
+        if(uid){
+            $(".items").html("");
+            $(".products").html("");
+            $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php?id="+uid,data=>{
+                let resData=data.data;
+                let len=resData.length;
+                $("#top-gwc-account").text(len);
+                $("#gwc-account").text(len);
+                $("#side-gwc-account").text(len);
+                resData.forEach(good=>{
+                    $(".items").append(`<dl>
+                        <dt><a><img src="${good.pimg}" alt=""></a></dt>
+                        <dd>${good.pname}</dd>
+                        <dd>
+                            <div class="pri">
+                                <span>￥${good.pprice}<span>x${good.pnum}</span></span>
+                            </div>
+                            <div class="del-btn" >
+                                <span class="delete" data-id="${good.pid}">删除</span>
+                            </div>
+                        </dd>
+                    </dl>`);
+                    $(".products").append(`<dl>
+                        <dt>
+                            <a>
+                                <img src="${good.pimg}" alt="">
+                            </a>
+                        </dt>
+                        <dd class="pro-name fLeft">
+                            <a>${good.pname}</a>
+                        </dd>
+                        <dd class="pro-price fLeft">
+                            <span>￥${good.pprice}</span>
+                            <span>&nbsp;x&nbsp;${good.pnum}</span>
+                            <span><a class="delete" data-id="${good.pid}">删除</a></span>
+                        </dd>
+                    </dl>`)
+                });
+                $(".delete").click(function(){
+                    let pid=$(this).attr("data-id");
+                    let deleteUrl="http://jx.xuzhixiang.top/ap/api/cart-delete.php?uid="+uid+"&pid="+pid;
+                    $.get(deleteUrl,res=>{
+                        getgwcList();
+                    })
+                })
+            })
+        }
+    }
+    getgwcList();
 });
 

@@ -42,16 +42,21 @@ $(function($){
 
     $(".buybtn").click(function(){
         let uid=storage.getItem("uid");
-        let pnum=$pnum.val();
-        let addGwcUrl="http://jx.xuzhixiang.top/ap/api/add-product.php?uid="+uid+"&pid="+pid+"&pnum="+pnum;
-        $.get(addGwcUrl,data=>{
-            // console.log(data);data.msg
-            if(data.msg=="插入成功"){
-                alert("添加购物车成功");
-            }else{
-                alert("添加失败，请重试");
-            }
-        })
+        if(uid){
+            let pnum=$pnum.val();
+            let addGwcUrl="http://jx.xuzhixiang.top/ap/api/add-product.php?uid="+uid+"&pid="+pid+"&pnum="+pnum;
+            $.get(addGwcUrl,data=>{
+                // console.log(data);data.msg
+                if(data.msg=="插入成功"){
+                    alert("添加购物车成功");
+                }else{
+                    alert("添加失败，请重试");
+                }
+            });
+        }else{
+            alert("请先登录");
+            window.location.href="../html/login.html";
+        }
     })
     
 });

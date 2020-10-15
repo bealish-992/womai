@@ -6,9 +6,9 @@ $(function ($) {
         $pimg = $("#pimg");
         $pname = $(".pname");
         $price = $("#price");
-        $pnum = $("#pnum");
+        $pnum = $(".pnum");
         $xiaoj = $("#xiaoji");
-        $delete = $("#delete");
+        
 
         // 获取购物车列表
         function getGoods() {
@@ -30,14 +30,14 @@ $(function ($) {
                         <div class="good_pic2" id="price" data-price="${obj.pprice}">￥${obj.pprice}</div>
                         <div class="good_pic3">
                             <div class="reduce"></div>
-                            <input type="text" id="pnum" value="${obj.pnum}">
+                            <input type="text" class="pnum" value="${obj.pnum}">
                             <div class="plus"></div>
                         </div>
                         <div class="good_pic4">0.00</div>
                         <div class="good_pic5 xiaoji" ></div>
                         <div class="good_pic6">
                             <a>收藏</a>
-                            <a id="delete">删除</a>
+                            <a class="delete">删除</a>
                         </div>
                     </div>`;
                     $(".goods_content").append(htmlStr);
@@ -86,9 +86,39 @@ $(function ($) {
                     $(this).prev().val(num);
                     chengePnum($(this).parent().parent(".good"));
                 })
+
+                $(".delete").click(function(){
+                    deleteGood($(this));
+                })
             });
 
         };
+
+        //删除
+        function deleteGood(ele){
+            $good=$(ele).parent().parent();
+            let pid=$good.attr("data-id");
+            let deleteUrl="http://jx.xuzhixiang.top/ap/api/cart-delete.php?uid="+uid+"&pid="+pid;
+            $.get(deleteUrl,res=>{
+                $good.remove();
+                
+                let checkBoxs = $(".good .checkbox").get();
+                    let flag = true;
+                    checkBoxs.forEach(checkbox => {
+                        if (!checkbox.checked) {
+                            flag = false;
+                        }
+                    });
+                    if (flag) {
+                        $("#all").get(0).checked = true;
+                    } else {
+                        $("#all").get(0).checked = false;
+                    }
+                
+                moneySum();
+            });
+            
+        }
 
         // 计算总金额,修改选中件数
         function moneySum() {
@@ -120,13 +150,25 @@ $(function ($) {
         // 增加，减少商品数量
         function chengePnum(good) {
             let pid = good.attr("data-id");
-            let pnum = good.find("#pnum").val();
+            let pnum = good.find(".pnum").val();
             let url = "http://jx.xuzhixiang.top/ap/api/cart-update-num.php?uid=" + uid + "&pid=" + pid + "&pnum=" + pnum;
             $.get(url, data => {
                 // console.log(data);
                 let xj = good.find("#price").attr("data-price") * pnum;
                 good.find(".xiaoji").text("￥" + xj.toFixed(2)).attr("data-price", xj.toFixed(2));
                 moneySum();
+                let checkBoxs = $(".good .checkbox").get();
+                    let flag = true;
+                    checkBoxs.forEach(checkbox => {
+                        if (!checkbox.checked) {
+                            flag = false;
+                        }
+                    });
+                    if (flag) {
+                        $("#all").get(0).checked = true;
+                    } else {
+                        $("#all").get(0).checked = false;
+                    }
             })
         }
 
